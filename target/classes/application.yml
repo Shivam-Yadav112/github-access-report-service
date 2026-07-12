@@ -1,0 +1,26 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: github-access-report
+
+github:
+  api-base-url: https://api.github.com
+  # Set via env var GITHUB_TOKEN. Needs read:org + repo scopes (classic PAT),
+  # or a fine-grained PAT with "Administration" (read) + "Metadata" (read) repo
+  # permissions and "Members" (read) org permission.
+  token: ${GITHUB_TOKEN:}
+  page-size: 100
+  max-concurrent-requests: 10
+  cache-ttl-minutes: 15
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+
+logging:
+  level:
+    com.example.githubaccessreport: INFO
