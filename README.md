@@ -204,3 +204,7 @@ src/main/java/com/example/githubaccessreport/
 ├── model/report/       DTOs for this service's own API response shape
 └── service/            AccessReportService — fetch, aggregate, cache
 ```
+http://localhost:8080/api/v1/orgs/shivam-test-org/access-report
+http://localhost:8080/api/v1/orgs/shivam-test-org/access-report/full
+http://localhost:8080/api/v1/orgs/shivam-test-org/access-report/users/Shivam-Yadav112
+http://localhost:8080/api/v1/orgs/shivam-test-org/access-report/repos/test-repo
